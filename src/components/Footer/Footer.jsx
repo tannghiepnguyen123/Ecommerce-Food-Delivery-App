@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
-import "../../styles/footer.css";
+import "./footer.css";
 
 const Footer = () => {
   return (
