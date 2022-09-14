@@ -79,6 +79,17 @@
     box-shadow: 5px 5px 15px -5px;
 }
 
+.login {
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212245;
+}
+
+.login:hover {
+    color: #df2020;
+}
+
 @media screen and (max-width: 992px) {
     .logo img {
         width: calc(100% - 70%);

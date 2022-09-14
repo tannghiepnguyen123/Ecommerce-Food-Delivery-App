@@ -2,14 +2,22 @@ import React, { useRef } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const Register = () => {
   const signupNameRef = useRef(null);
   const signupPasswordRef = useRef(null);
   const signupEmailRef = useRef(null);
+  const { signup } = useAuth();
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
+    signup(signupEmailRef.current.value, signupPasswordRef.current.value)
+      .then((userCredential) => {
+        setTimeout(() => navigate("/"), 700);
+      })
+      .catch((error) => {});
   };
   return (
     <Helmet title="Signup">

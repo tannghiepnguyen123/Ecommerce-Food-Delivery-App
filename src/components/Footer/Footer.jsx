@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <span>
-                <i class="ri-send-plane-line"></i>
+                <i className="ri-send-plane-line"></i>
               </span>
             </div>
           </Col>
@@ -75,7 +75,7 @@ const Footer = () => {
                   rel="noreferrer"
                   href="https://www.facebook.com/profile.php?id=100017727913197"
                 >
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </a>
               </span>
               <span>
@@ -84,7 +84,7 @@ const Footer = () => {
                   rel="noreferrer"
                   href="https://github.com/tannghiepnguyen123"
                 >
-                  <i class="ri-github-line"></i>
+                  <i className="ri-github-line"></i>
                 </a>
               </span>
               <span>
@@ -93,7 +93,7 @@ const Footer = () => {
                   rel="noreferrer"
                   href="https://www.youtube.com/channel/UCiFX2nMMNMp2ZFOfOG-aYUQ"
                 >
-                  <i class="ri-youtube-line"></i>
+                  <i className="ri-youtube-line"></i>
                 </a>
               </span>
               <span>
@@ -102,7 +102,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </a>
               </span>
             </div>

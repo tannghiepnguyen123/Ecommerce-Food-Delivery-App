@@ -25,7 +25,8 @@ const Why = () => {
             <ListGroup className="mt-4">
               <ListGroupItem className="border-0 ps-0">
                 <p className="choose__us-title d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Fresh and tasty foods
+                  <i className="ri-checkbox-circle-line"></i> Fresh and tasty
+                  foods
                 </p>
                 <p className="choose__us-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -34,7 +35,7 @@ const Why = () => {
               </ListGroupItem>
               <ListGroupItem className="border-0 ps-0">
                 <p className="choose__us-title d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Quality support
+                  <i className="ri-checkbox-circle-line"></i> Quality support
                 </p>
                 <p className="choose__us-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
@@ -43,7 +44,7 @@ const Why = () => {
               </ListGroupItem>
               <ListGroupItem className="border-0 ps-0">
                 <p className="choose__us-title d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Order from any
+                  <i className="ri-checkbox-circle-line"></i> Order from any
                   location
                 </p>
                 <p className="choose__us-desc">

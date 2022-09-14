@@ -2,13 +2,30 @@ import React, { useRef } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Alert } from "reactstrap";
+import { useAuth } from "../contexts/AuthContext";
 
 const Login = () => {
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
   const loginNameRef = useRef(null);
   const loginPasswordRef = useRef(null);
+  const navigate = useNavigate();
+  const { signin } = useAuth();
   const submitHandler = (e) => {
     e.preventDefault();
+    signin(loginNameRef.current.value, loginPasswordRef.current.value)
+      .then((userCredential) => {
+        setError(false);
+        setSuccess(true);
+        setTimeout(() => navigate("/"), 700);
+      })
+      .catch((error) => {
+        setError(true);
+        setSuccess(false);
+      });
   };
   return (
     <Helmet title="Login">
@@ -38,6 +55,8 @@ const Login = () => {
                   Login
                 </button>
               </form>
+              {error && <Alert color="danger">Wrong email or password</Alert>}
+              {success && <Alert color="success">Login successfully</Alert>}
               <Link to={"/register"}>
                 Don't have an account? Create an account
               </Link>
