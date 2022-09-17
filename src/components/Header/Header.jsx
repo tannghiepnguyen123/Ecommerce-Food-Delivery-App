@@ -75,39 +75,41 @@ const Header = () => {
             </div>
           </div>
           {/* NAV RIGHT ICONS  */}
-          {currentUser ? (
-            <div className="nav__right d-flex align-items-center gap-4">
-              <span className="cart__icon" onClick={toggleCart}>
-                <i className="ri-shopping-basket-line"></i>
-                <span className="cart__badge">{totalQuantity}</span>
-              </span>
-              <span className="user">
-                <div className="d-flex align-items-center">
-                  <i className="ri-user-line"></i>
-                  <span
-                    style={{ cursor: "pointer" }}
-                    className="ms-3"
-                    onClick={() => {
-                      signout()
-                        .then(() => {
-                          navigate("/");
-                        })
-                        .catch((error) => {});
-                    }}
-                  >
-                    Sign out
-                  </span>
-                </div>
-              </span>
-              <span className="mobile__menu" onClick={toggleMenu}>
-                <i className="ri-menu-line"></i>
-              </span>
-            </div>
-          ) : (
-            <Link className="login" to={"/login"}>
-              Login
-            </Link>
-          )}
+          <div className="nav__right d-flex align-items-center gap-4">
+            {currentUser ? (
+              <Fragment>
+                <span className="cart__icon" onClick={toggleCart}>
+                  <i className="ri-shopping-basket-line"></i>
+                  <span className="cart__badge">{totalQuantity}</span>
+                </span>
+                <span className="user">
+                  <div className="d-flex align-items-center">
+                    <i className="ri-user-line"></i>
+                    <span
+                      style={{ cursor: "pointer" }}
+                      className="ms-3"
+                      onClick={() => {
+                        signout()
+                          .then(() => {
+                            navigate("/");
+                          })
+                          .catch((error) => {});
+                      }}
+                    >
+                      Sign out
+                    </span>
+                  </div>
+                </span>
+              </Fragment>
+            ) : (
+              <Link className="login" to={"/login"}>
+                Login
+              </Link>
+            )}
+            <span className="mobile__menu" onClick={toggleMenu}>
+              <i className="ri-menu-line"></i>
+            </span>
+          </div>
         </div>
       </Container>
     </header>
